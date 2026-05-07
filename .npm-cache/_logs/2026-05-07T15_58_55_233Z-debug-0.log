@@ -1,0 +1,174 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.9.0
+2 info using node@v24.14.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\BJ\OneDrive\Desktop\TxRacs LLC\.npmrc
+5 silly config load:file:C:\Users\BJ\.npmrc
+6 silly config load:file:C:\Users\BJ\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install" "--no-audit" "--no-fund" "--loglevel" "warn" "--cache" ".\\.npm-cache"
+9 verbose logfile logs-max:10 dir:C:\Users\BJ\OneDrive\Desktop\TxRacs LLC\.npm-cache\_logs\2026-05-07T15_58_55_233Z-
+10 verbose logfile C:\Users\BJ\OneDrive\Desktop\TxRacs LLC\.npm-cache\_logs\2026-05-07T15_58_55_233Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 silly idealTree buildDeps
+14 silly fetch manifest framer-motion@^11.15.0
+15 silly packumentCache full:https://registry.npmjs.org/framer-motion cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/npm 14400ms
+17 http fetch GET 200 https://registry.npmjs.org/framer-motion 32348ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/framer-motion set size:undefined disposed:false
+19 silly fetch manifest @emotion/is-prop-valid@*
+20 silly packumentCache full:https://registry.npmjs.org/@emotion%2fis-prop-valid cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/@emotion%2fis-prop-valid 417ms (cache miss)
+22 silly packumentCache full:https://registry.npmjs.org/@emotion%2fis-prop-valid set size:undefined disposed:false
+23 silly fetch manifest react@^18.3.1
+24 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/react 33444ms (cache miss)
+26 silly packumentCache full:https://registry.npmjs.org/react set size:undefined disposed:false
+27 silly fetch manifest react-dom@^18.3.1
+28 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/react-dom 12768ms (cache miss)
+30 silly packumentCache full:https://registry.npmjs.org/react-dom set size:undefined disposed:false
+31 silly fetch manifest vite@^6.0.5
+32 silly packumentCache full:https://registry.npmjs.org/vite cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/vite 43629ms (cache miss)
+34 silly packumentCache full:https://registry.npmjs.org/vite set size:undefined disposed:false
+35 silly fetch manifest @types/node@^18.0.0 || ^20.0.0 || >=22.0.0
+36 silly packumentCache full:https://registry.npmjs.org/@types%2fnode cache-miss
+37 http fetch GET 200 https://registry.npmjs.org/@types%2fnode 10448ms (cache miss)
+38 silly packumentCache full:https://registry.npmjs.org/@types%2fnode set size:undefined disposed:false
+39 silly fetch manifest jiti@>=1.21.0
+40 silly packumentCache full:https://registry.npmjs.org/jiti cache-miss
+41 http fetch GET 200 https://registry.npmjs.org/jiti 1111ms (cache miss)
+42 silly packumentCache full:https://registry.npmjs.org/jiti set size:undefined disposed:false
+43 silly fetch manifest less@*
+44 silly packumentCache full:https://registry.npmjs.org/less cache-miss
+45 http fetch GET 200 https://registry.npmjs.org/less 726ms (cache miss)
+46 silly packumentCache full:https://registry.npmjs.org/less set size:undefined disposed:false
+47 silly fetch manifest lightningcss@^1.21.0
+48 silly packumentCache full:https://registry.npmjs.org/lightningcss cache-miss
+49 http fetch GET 200 https://registry.npmjs.org/lightningcss 447ms (cache miss)
+50 silly packumentCache full:https://registry.npmjs.org/lightningcss set size:undefined disposed:false
+51 silly fetch manifest sass@*
+52 silly packumentCache full:https://registry.npmjs.org/sass cache-miss
+53 http fetch GET 200 https://registry.npmjs.org/sass 1215ms (cache miss)
+54 silly packumentCache full:https://registry.npmjs.org/sass set size:undefined disposed:false
+55 silly fetch manifest sass-embedded@*
+56 silly packumentCache full:https://registry.npmjs.org/sass-embedded cache-miss
+57 http fetch GET 200 https://registry.npmjs.org/sass-embedded 615ms (cache miss)
+58 silly packumentCache full:https://registry.npmjs.org/sass-embedded set size:undefined disposed:false
+59 silly fetch manifest stylus@*
+60 silly packumentCache full:https://registry.npmjs.org/stylus cache-miss
+61 http fetch GET 200 https://registry.npmjs.org/stylus 635ms (cache miss)
+62 silly packumentCache full:https://registry.npmjs.org/stylus set size:undefined disposed:false
+63 silly fetch manifest sugarss@*
+64 silly packumentCache full:https://registry.npmjs.org/sugarss cache-miss
+65 http fetch GET 200 https://registry.npmjs.org/sugarss 549ms (cache miss)
+66 silly packumentCache full:https://registry.npmjs.org/sugarss set size:undefined disposed:false
+67 silly fetch manifest postcss@^8.4.49
+68 silly packumentCache full:https://registry.npmjs.org/postcss cache-miss
+69 http fetch GET 200 https://registry.npmjs.org/postcss 1832ms (cache miss)
+70 silly packumentCache full:https://registry.npmjs.org/postcss set size:undefined disposed:false
+71 silly fetch manifest terser@^5.16.0
+72 silly packumentCache full:https://registry.npmjs.org/terser cache-miss
+73 http fetch GET 200 https://registry.npmjs.org/terser 2265ms (cache miss)
+74 silly packumentCache full:https://registry.npmjs.org/terser set size:undefined disposed:false
+75 silly fetch manifest tsx@^4.8.1
+76 silly packumentCache full:https://registry.npmjs.org/tsx cache-miss
+77 http fetch GET 200 https://registry.npmjs.org/tsx 562ms (cache miss)
+78 silly packumentCache full:https://registry.npmjs.org/tsx set size:undefined disposed:false
+79 silly fetch manifest yaml@^2.4.2
+80 silly packumentCache full:https://registry.npmjs.org/yaml cache-miss
+81 http fetch GET 200 https://registry.npmjs.org/yaml 702ms (cache miss)
+82 silly packumentCache full:https://registry.npmjs.org/yaml set size:undefined disposed:false
+83 silly fetch manifest tailwindcss@^3.4.17
+84 silly packumentCache full:https://registry.npmjs.org/tailwindcss cache-miss
+85 http fetch GET 200 https://registry.npmjs.org/tailwindcss 7740ms (cache miss)
+86 silly packumentCache full:https://registry.npmjs.org/tailwindcss set size:undefined disposed:false
+87 silly placeDep ROOT framer-motion@11.18.2 REPLACE for: txracs-llc-website@1.0.0 want: ^11.15.0
+88 silly placeDep ROOT tailwindcss@3.4.19 REPLACE for: txracs-llc-website@1.0.0 want: ^3.4.17
+89 silly placeDep ROOT vite@6.4.2 REPLACE for: txracs-llc-website@1.0.0 want: ^6.0.5
+90 silly fetch manifest fsevents@~2.3.3
+91 silly packumentCache full:https://registry.npmjs.org/fsevents cache-miss
+92 http fetch GET 200 https://registry.npmjs.org/fsevents 592ms (cache miss)
+93 silly packumentCache full:https://registry.npmjs.org/fsevents set size:undefined disposed:false
+94 silly fetch manifest balanced-match@^1.0.0
+95 silly packumentCache full:https://registry.npmjs.org/balanced-match cache-miss
+96 http fetch GET 200 https://registry.npmjs.org/balanced-match 262ms (cache miss)
+97 silly packumentCache full:https://registry.npmjs.org/balanced-match set size:undefined disposed:false
+98 silly placeDep node_modules/brace-expansion balanced-match@1.0.2 OK for: brace-expansion@1.1.14 want: ^1.0.0
+99 silly placeDep ROOT fsevents@2.3.3 OK for: vite@6.4.2 want: ~2.3.3
+100 silly reify mark retired [
+100 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\balanced-match'
+100 silly reify ]
+101 silly reify mark retired [
+101 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\framer-motion'
+101 silly reify ]
+102 silly reify mark retired [
+102 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\tailwindcss'
+102 silly reify ]
+103 silly reify mark retired [ 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\vite' ]
+104 silly reify mark retired [
+104 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\jsesc',
+104 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\jsesc',
+104 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\jsesc.cmd',
+104 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\jsesc.ps1'
+104 silly reify ]
+105 silly reify mark retired [
+105 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\json5',
+105 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\json5',
+105 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\json5.cmd',
+105 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\json5.ps1'
+105 silly reify ]
+106 silly reify moves {
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\balanced-match': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.balanced-match-wZZTg1Gb',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\framer-motion': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.framer-motion-IjJuxuCM',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\tailwindcss': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.tailwindcss-PD26zOpe',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\vite': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.vite-tIjIfyJS',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\jsesc': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.jsesc-0cuTZYeo',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\jsesc': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\.jsesc-GF5OfwIV',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\jsesc.cmd': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\.jsesc.cmd-cL0yCBDI',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\jsesc.ps1': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\.jsesc.ps1-R2nSpPd3',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\json5': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.json5-S1rjvzOI',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\json5': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\.json5-1R0chOPa',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\json5.cmd': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\.json5.cmd-UdpDDNA3',
+106 silly reify   'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\json5.ps1': 'C:\\Users\\BJ\\OneDrive\\Desktop\\TxRacs LLC\\node_modules\\.bin\\.json5.ps1-XR8ieudr'
+106 silly reify }
+107 silly packumentCache corgi:https://registry.npmjs.org/jsesc cache-miss
+108 silly packumentCache corgi:https://registry.npmjs.org/json5 cache-miss
+109 http cache vite@https://registry.npmjs.org/vite/-/vite-6.4.2.tgz 1ms (cache hit)
+110 http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz 0ms (cache hit)
+111 http cache framer-motion@https://registry.npmjs.org/framer-motion/-/framer-motion-11.18.2.tgz 0ms (cache hit)
+112 http cache balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz 0ms (cache hit)
+113 silly tarball no local data for vite@https://registry.npmjs.org/vite/-/vite-6.4.2.tgz. Extracting by manifest.
+114 silly tarball no local data for tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz. Extracting by manifest.
+115 silly tarball no local data for framer-motion@https://registry.npmjs.org/framer-motion/-/framer-motion-11.18.2.tgz. Extracting by manifest.
+116 silly tarball no local data for balanced-match@https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz. Extracting by manifest.
+117 http fetch GET 200 https://registry.npmjs.org/jsesc 399ms (cache miss)
+118 silly packumentCache corgi:https://registry.npmjs.org/jsesc set size:undefined disposed:false
+119 http fetch GET 200 https://registry.npmjs.org/json5 413ms (cache miss)
+120 silly packumentCache corgi:https://registry.npmjs.org/json5 set size:undefined disposed:false
+121 http fetch GET 200 https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 384ms (cache miss)
+122 http fetch GET 200 https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 762ms (cache miss)
+123 http fetch GET 200 https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.2.tgz 1134ms (cache miss)
+124 http fetch GET 200 https://registry.npmjs.org/vite/-/vite-6.4.2.tgz 15512ms (cache miss)
+125 http fetch GET 200 https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz 16146ms (cache miss)
+126 http fetch GET 200 https://registry.npmjs.org/framer-motion/-/framer-motion-11.18.2.tgz 16556ms (cache miss)
+127 silly CHANGE node_modules/json5
+128 silly CHANGE node_modules/jsesc
+129 silly ADD node_modules/brace-expansion/node_modules/balanced-match
+130 silly CHANGE node_modules/vite
+131 silly CHANGE node_modules/tailwindcss
+132 silly CHANGE node_modules/framer-motion
+133 silly REMOVE node_modules/balanced-match
+134 verbose cwd C:\Users\BJ\OneDrive\Desktop\TxRacs LLC
+135 verbose os Windows_NT 10.0.19045
+136 verbose node v24.14.0
+137 verbose npm  v11.9.0
+138 notice
+138 notice New minor version of npm available! 11.9.0 -> 11.14.0
+138 notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.0
+138 notice To update run: npm install -g npm@11.14.0
+138 notice  { force: true, Symbol(proc-log.meta): true }
+139 verbose exit 0
+140 info ok

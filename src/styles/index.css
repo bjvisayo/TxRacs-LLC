@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #075dbf;
+  color: white;
+}
+
+@layer components {
+  .container-premium {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-pad {
+    @apply py-20 lg:py-28;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-cta px-6 py-4 text-sm font-extrabold text-white shadow-lg shadow-red-500/25 transition duration-300 hover:-translate-y-0.5 hover:bg-red-700 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-200;
+  }
+
+  .btn-blue {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-sm font-extrabold text-white shadow-lg shadow-blue-500/25 transition duration-300 hover:-translate-y-0.5 hover:bg-primaryDark hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-200;
+  }
+
+  .eyebrow {
+    @apply text-xs font-black uppercase tracking-[0.12em] text-primary;
+  }
+}
