@@ -21,29 +21,29 @@ export function ContactPage() {
                 Based in Cypress and serving the greater Houston area with residential and commercial HVAC and refrigeration support.
               </p>
               <div className="mt-8 grid gap-4">
-                <a href={`tel:${business.phone}`} className="flex items-center gap-4 rounded-2xl bg-softBlue p-5 transition hover:-translate-y-1 hover:shadow-card">
+                <a href={`tel:${business.phone}`} className="flex min-w-0 items-center gap-4 rounded-2xl bg-softBlue p-5 transition hover:-translate-y-1 hover:shadow-card">
                   <span className="grid h-12 w-12 place-items-center rounded-full bg-primary text-white">
                     <Phone className="h-5 w-5" />
                   </span>
-                  <span>
+                  <span className="min-w-0">
                     <span className="block text-sm text-slate-500">Phone</span>
                     <span className="font-black text-ink">{business.displayPhone}</span>
                   </span>
                 </a>
-                <a href={`mailto:${business.email}`} className="flex items-center gap-4 rounded-2xl bg-softBlue p-5 transition hover:-translate-y-1 hover:shadow-card">
+                <a href={`mailto:${business.email}`} className="flex min-w-0 items-center gap-4 rounded-2xl bg-softBlue p-5 transition hover:-translate-y-1 hover:shadow-card">
                   <span className="grid h-12 w-12 place-items-center rounded-full bg-cta text-white">
                     <Mail className="h-5 w-5" />
                   </span>
-                  <span>
+                  <span className="min-w-0">
                     <span className="block text-sm text-slate-500">Email</span>
                     <span className="font-black text-ink">{business.email}</span>
                   </span>
                 </a>
-                <div className="flex items-center gap-4 rounded-2xl bg-softBlue p-5">
+                <div className="flex min-w-0 items-center gap-4 rounded-2xl bg-softBlue p-5">
                   <span className="grid h-12 w-12 place-items-center rounded-full bg-emerald-500 text-white">
                     <MapPin className="h-5 w-5" />
                   </span>
-                  <span>
+                  <span className="min-w-0">
                     <span className="block text-sm text-slate-500">Address</span>
                     <span className="font-black text-ink">
                       {business.address}, {business.cityStateZip}

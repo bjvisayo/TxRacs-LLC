@@ -15,13 +15,13 @@ export function ServiceAreasSection() {
       <div className="container-premium grid items-center gap-12 lg:grid-cols-2">
         <Reveal>
           <p className="eyebrow">Service Areas</p>
-          <h2 className="mt-3 text-4xl font-black leading-tight text-ink lg:text-5xl">Proudly Serving Cypress & Surrounding Areas</h2>
+          <h2 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl lg:text-5xl">Proudly Serving Cypress & Surrounding Areas</h2>
           <p className="mt-5 max-w-xl text-base leading-7 text-slate-600">
             From our location in Cypress, TX, we provide fast, reliable HVAC and refrigeration services to homeowners and businesses throughout the greater Houston metropolitan area.
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {areas.map((area) => (
-              <div key={area.name} className="flex items-center gap-4 rounded-2xl bg-softBlue p-4 transition duration-300 hover:-translate-y-1 hover:shadow-card">
+              <div key={area.name} className="flex min-w-0 items-center gap-4 rounded-2xl bg-softBlue p-4 transition duration-300 hover:-translate-y-1 hover:shadow-card">
                 <span className={`grid h-11 w-11 shrink-0 place-items-center rounded-full ${area.color} text-white`}>
                   <MapPin className="h-5 w-5" />
                 </span>

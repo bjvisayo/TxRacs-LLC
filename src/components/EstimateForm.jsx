@@ -1,6 +1,5 @@
-import { CalendarCheck, CheckCircle2, Lock } from 'lucide-react';
+import { CalendarCheck, CheckCircle2, Loader2, Lock } from 'lucide-react';
 import { useState } from 'react';
-import { business } from '../utils/business';
 
 const services = [
   'AC Repair',
@@ -17,11 +16,12 @@ const services = [
 export function EstimateForm({ compact = false }) {
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
+  const isSubmitting = status === 'submitting';
 
   const inputClass =
     'w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 outline-none transition placeholder:text-slate-400 focus:border-primary focus:ring-4 focus:ring-blue-100';
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -31,7 +31,6 @@ export function EstimateForm({ compact = false }) {
       email: String(formData.get('email') || '').trim(),
       service: String(formData.get('service') || '').trim(),
       message: String(formData.get('message') || '').trim(),
-      submittedAt: new Date().toISOString(),
     };
 
     if (!lead.name || !lead.phone || !lead.service) {
@@ -40,24 +39,33 @@ export function EstimateForm({ compact = false }) {
       return;
     }
 
-    const existingLeads = JSON.parse(localStorage.getItem('txracs_quote_requests') || '[]');
-    localStorage.setItem('txracs_quote_requests', JSON.stringify([lead, ...existingLeads].slice(0, 25)));
-
-    const subject = encodeURIComponent(`New Quote Request - ${lead.service}`);
-    const body = encodeURIComponent(
-      `Name: ${lead.name}\nPhone: ${lead.phone}\nEmail: ${lead.email || 'Not provided'}\nService Needed: ${lead.service}\nMessage: ${lead.message || 'Not provided'}`,
-    );
-
     setError('');
-    setStatus('sent');
-    window.location.href = `mailto:${business.email}?subject=${subject}&body=${body}`;
-    form.reset();
+    setStatus('submitting');
+
+    try {
+      const response = await fetch('/api/quote-requests', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(lead),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Unable to submit your request.');
+      }
+
+      setStatus('sent');
+      form.reset();
+    } catch (submissionError) {
+      setStatus('idle');
+      setError(submissionError.message || 'We could not submit your request right now. Please call us directly.');
+    }
   }
 
   return (
-    <form className="rounded-2xl bg-white p-6 shadow-premium sm:p-8" onSubmit={handleSubmit}>
+    <form className="w-full rounded-2xl bg-white p-5 shadow-premium sm:p-8" onSubmit={handleSubmit}>
       <div className="text-center">
-        <h3 className="text-2xl font-black text-ink">Get Your Free Estimate</h3>
+        <h3 className="text-xl font-black text-ink sm:text-2xl">Get Your Free Estimate</h3>
         <p className="mt-2 text-sm text-slate-600">Same-day service available. No obligation quote.</p>
       </div>
 
@@ -88,13 +96,13 @@ export function EstimateForm({ compact = false }) {
       {status === 'sent' && (
         <p className="mt-4 flex items-center gap-2 rounded-lg bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-700">
           <CheckCircle2 className="h-4 w-4" />
-          Quote request prepared. Your email app should open to send it.
+          Quote request received. We will contact you shortly.
         </p>
       )}
 
-      <button type="submit" className="btn-blue mt-4 w-full">
-        <CalendarCheck className="h-4 w-4" aria-hidden="true" />
-        Schedule Service
+      <button type="submit" className="btn-blue mt-4 w-full disabled:cursor-not-allowed disabled:opacity-70" disabled={isSubmitting}>
+        {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : <CalendarCheck className="h-4 w-4" aria-hidden="true" />}
+        {isSubmitting ? 'Sending Request...' : 'Schedule Service'}
       </button>
       <p className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-500">
         <Lock className="h-3.5 w-3.5" aria-hidden="true" />

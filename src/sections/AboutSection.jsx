@@ -22,7 +22,7 @@ export function AboutSection() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="eyebrow">About TxRacs LLC</p>
-          <h2 className="mt-3 text-4xl font-black leading-tight text-ink lg:text-5xl">Your Trusted Family-Owned HVAC & Refrigeration Experts</h2>
+          <h2 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl lg:text-5xl">Your Trusted Family-Owned HVAC & Refrigeration Experts</h2>
           <div className="mt-6 space-y-4 text-base leading-7 text-slate-600">
             <p>
               Founded in the heart of Texas, TxRacs LLC serves Cypress and surrounding areas with dependable heating, cooling, and refrigeration service for homes and businesses.

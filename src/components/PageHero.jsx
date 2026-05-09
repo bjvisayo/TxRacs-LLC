@@ -12,7 +12,7 @@ export function PageHero({ eyebrow, title, description }) {
         transition={{ duration: 0.6 }}
       >
         <p className="text-xs font-black uppercase tracking-[0.12em] text-blue-200">{eyebrow}</p>
-        <h1 className="mt-4 text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
+        <h1 className="mt-4 text-3xl font-black leading-tight sm:text-5xl lg:text-6xl">{title}</h1>
         <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-blue-100">{description}</p>
       </motion.div>
     </section>

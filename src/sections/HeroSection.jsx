@@ -12,8 +12,8 @@ export function HeroSection() {
       <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cta/20 blur-3xl" />
 
-      <div className="container-premium relative grid min-h-[calc(100vh-80px)] items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr]">
-        <motion.div initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }}>
+      <div className="container-premium relative grid min-h-[calc(100vh-80px)] items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.05fr_0.95fr]">
+        <motion.div className="min-w-0" initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75 }}>
           <div className="flex flex-wrap gap-3">
             <span className="inline-flex items-center gap-2 rounded-full bg-cta px-4 py-2 text-xs font-black text-white">
               <Zap className="h-4 w-4" /> 24/7 Emergency Service
@@ -23,10 +23,10 @@ export function HeroSection() {
             </span>
           </div>
 
-          <h1 className="mt-7 max-w-3xl text-5xl font-black leading-[1.02] text-white sm:text-6xl lg:text-7xl">
+          <h1 className="mt-7 max-w-3xl text-4xl font-black leading-[1.04] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
             Reliable HVAC & Refrigeration Services in <span className="text-yellow-400">Cypress, TX</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg font-semibold leading-8 text-white/90">
+          <p className="mt-6 max-w-2xl text-base font-semibold leading-7 text-white/90 sm:text-lg sm:leading-8">
             Expert heating, cooling, and refrigeration solutions for your home or business. Residential & Commercial services with honest pricing you can trust.
           </p>
 
@@ -52,10 +52,10 @@ export function HeroSection() {
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href={`tel:${business.phone}`} className="btn-primary">
+            <a href={`tel:${business.phone}`} className="btn-primary w-full sm:w-auto">
               <Phone className="h-4 w-4" /> Call Now: {business.displayPhone}
             </a>
-            <a href="/contact" className="btn-blue">
+            <a href="/contact" className="btn-blue w-full sm:w-auto">
               <CalendarCheck className="h-4 w-4" /> Request Service
             </a>
           </div>
