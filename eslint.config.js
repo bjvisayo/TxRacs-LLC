@@ -14,6 +14,8 @@ export default [
       sourceType: 'module',
       globals: {
         document: 'readonly',
+        FormData: 'readonly',
+        localStorage: 'readonly',
         window: 'readonly',
       },
       parserOptions: {

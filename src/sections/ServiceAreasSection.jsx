@@ -32,7 +32,7 @@ export function ServiceAreasSection() {
               </div>
             ))}
           </div>
-          <a href="#contact" className="mt-8 inline-flex items-center gap-2 text-sm font-black text-primary">
+          <a href="/contact" className="mt-8 inline-flex items-center gap-2 text-sm font-black text-primary">
             View All Service Areas <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>

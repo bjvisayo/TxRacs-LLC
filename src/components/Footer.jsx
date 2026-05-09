@@ -16,7 +16,7 @@ export function Footer() {
           </p>
           <div className="mt-6 flex gap-3">
             {[Facebook, Instagram, Twitter].map((Icon, index) => (
-              <a key={index} href="#home" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-primary" aria-label="Social profile">
+              <a key={index} href="/" className="grid h-10 w-10 place-items-center rounded-full bg-white/10 transition hover:bg-primary" aria-label="Social profile">
                 <Icon className="h-4 w-4" />
               </a>
             ))}
@@ -27,7 +27,7 @@ export function Footer() {
           <h3 className="font-black text-white">Quick Links</h3>
           <div className="mt-5 grid gap-3">
             {quickLinks.map((link) => (
-              <a key={link} href={`#${link === 'Home' ? 'home' : link.toLowerCase().replace(' us', '').replace(' ', '-')}`} className="text-sm transition hover:text-white">
+              <a key={link} href={link === 'Home' ? '/' : `/${link.toLowerCase().replace(' us', '').replace(' ', '-')}`} className="text-sm transition hover:text-white">
                 {link}
               </a>
             ))}

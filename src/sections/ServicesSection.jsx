@@ -36,7 +36,7 @@ export function ServicesSection() {
                 </span>
                 <h3 className="mt-5 text-xl font-black">{title}</h3>
                 <p className={`mt-3 text-sm leading-6 ${highlight ? 'text-white' : 'text-slate-600'}`}>{text}</p>
-                <a href="#contact" className={`mt-5 inline-flex items-center gap-2 text-sm font-black ${highlight ? 'text-white' : 'text-primary'}`}>
+                <a href="/contact" className={`mt-5 inline-flex items-center gap-2 text-sm font-black ${highlight ? 'text-white' : 'text-primary'}`}>
                   Learn More <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </a>
               </article>
@@ -44,7 +44,7 @@ export function ServicesSection() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <a href="#contact" className="btn-blue">
+          <a href="/contact" className="btn-blue">
             View All Services <Fan className="h-4 w-4" />
           </a>
         </div>

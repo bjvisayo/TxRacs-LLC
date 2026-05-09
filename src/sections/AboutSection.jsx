@@ -45,7 +45,7 @@ export function AboutSection() {
               </div>
             ))}
           </div>
-          <a href="#services" className="btn-blue mt-8">
+          <a href="/services" className="btn-blue mt-8">
             Learn More About Us <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>

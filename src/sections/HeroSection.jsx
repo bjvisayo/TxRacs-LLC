@@ -55,7 +55,7 @@ export function HeroSection() {
             <a href={`tel:${business.phone}`} className="btn-primary">
               <Phone className="h-4 w-4" /> Call Now: {business.displayPhone}
             </a>
-            <a href="#contact" className="btn-blue">
+            <a href="/contact" className="btn-blue">
               <CalendarCheck className="h-4 w-4" /> Request Service
             </a>
           </div>

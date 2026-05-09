@@ -2,7 +2,7 @@ import { Flame, Snowflake } from 'lucide-react';
 
 export function Logo({ light = false }) {
   return (
-    <a href="#home" className="flex items-center gap-2" aria-label="TxRacs LLC home">
+    <a href="/" className="flex items-center gap-2" aria-label="TxRacs LLC home">
       <span
         className={`relative grid h-11 w-11 place-items-center rounded-full ${
           light ? 'bg-white/10' : 'bg-primary/10'
