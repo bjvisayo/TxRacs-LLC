@@ -51,6 +51,18 @@ export function EstimateForm({ compact = false }) {
       const result = await response.json().catch(() => ({}));
 
       if (!response.ok) {
+        if (result.code === 'CONFIG_MISSING') {
+          throw new Error('Online quote alerts are still being configured. Please call us directly for now.');
+        }
+
+        if (result.code === 'EMAIL_ALERT_FAILED') {
+          throw new Error('Your request could not trigger an email alert. Please call us directly for now.');
+        }
+
+        if (result.code === 'SUPABASE_SAVE_FAILED') {
+          throw new Error('Your request could not be saved. Please call us directly for now.');
+        }
+
         throw new Error(result.error || 'Unable to submit your request.');
       }
 

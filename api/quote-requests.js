@@ -2,6 +2,7 @@ const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const ADMIN_ALERT_EMAIL = process.env.ADMIN_ALERT_EMAIL;
+const RESEND_FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'TxRacs Website <onboarding@resend.dev>';
 
 const allowedServices = new Set([
   'AC Repair',
@@ -19,6 +20,19 @@ function sendJson(response, statusCode, payload) {
   response.statusCode = statusCode;
   response.setHeader('Content-Type', 'application/json');
   response.end(JSON.stringify(payload));
+}
+
+function getConfigStatus() {
+  return {
+    supabaseUrl: Boolean(SUPABASE_URL),
+    supabaseServiceRoleKey: Boolean(SUPABASE_SERVICE_ROLE_KEY),
+    resendApiKey: Boolean(RESEND_API_KEY),
+    adminAlertEmail: Boolean(ADMIN_ALERT_EMAIL),
+  };
+}
+
+function isConfigured() {
+  return Object.values(getConfigStatus()).every(Boolean);
 }
 
 function normalizeLead(body) {
@@ -111,7 +125,7 @@ async function sendAlertEmail(lead, savedLead) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      from: 'TxRacs Website <onboarding@resend.dev>',
+      from: RESEND_FROM_EMAIL,
       to: ADMIN_ALERT_EMAIL,
       reply_to: lead.email || undefined,
       subject: `New Quote Request - ${lead.service}`,
@@ -128,14 +142,26 @@ async function sendAlertEmail(lead, savedLead) {
 }
 
 export default async function handler(request, response) {
+  if (request.method === 'GET') {
+    sendJson(response, 200, {
+      ok: true,
+      configured: getConfigStatus(),
+    });
+    return;
+  }
+
   if (request.method !== 'POST') {
-    response.setHeader('Allow', 'POST');
+    response.setHeader('Allow', 'GET, POST');
     sendJson(response, 405, { error: 'Method not allowed.' });
     return;
   }
 
-  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !RESEND_API_KEY || !ADMIN_ALERT_EMAIL) {
-    sendJson(response, 500, { error: 'Quote system is not configured yet.' });
+  if (!isConfigured()) {
+    sendJson(response, 503, {
+      error: 'Quote system is not configured yet.',
+      code: 'CONFIG_MISSING',
+      configured: getConfigStatus(),
+    });
     return;
   }
 
@@ -157,8 +183,16 @@ export default async function handler(request, response) {
     });
   } catch (error) {
     console.error(error);
+    const message = error instanceof Error ? error.message : '';
+    const code = message.startsWith('Supabase insert failed')
+      ? 'SUPABASE_SAVE_FAILED'
+      : message.startsWith('Resend alert failed')
+        ? 'EMAIL_ALERT_FAILED'
+        : 'QUOTE_SUBMIT_FAILED';
+
     sendJson(response, 500, {
       error: 'We could not submit your request right now. Please call us directly.',
+      code,
     });
   }
 }
